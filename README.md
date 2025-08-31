@@ -47,7 +47,7 @@ and the intercept (if present) is excluded from the penalty.
 This is equivalent to multivariate ridge regression (scikit-learn’s `Ridge`) applied equation-by-equation, but solved in closed form for all equations at once.
 
 ### MinnesotaVAR as Weighted Ridge
-The *Minnesota prior* (see [Litterman, 1986: "Forecasting with Bayesian Vector Autoregressions — Five Years of Experience"](https://www.minneapolisfed.org/research/sr/sr115.pdf)) is a Bayesian shrinkage approach that imposes beliefs about how coefficients in a VAR should behave:
+The *Minnesota prior* (see [Litterman, 1986: "Forecasting with Bayesian Vector Autoregressions — Five Years of Experience"](https://www.jstor.org/stable/1391384)) is a Bayesian shrinkage approach that imposes beliefs about how coefficients in a VAR should behave:
 
 - Own-lag coefficients are shrunk toward 0 (for stationary/differenced data: growth rates, returns, etc.)
 - Cross-lag coefficients (other variables) are shrunk more heavily toward 0
