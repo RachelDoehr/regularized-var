@@ -1,3 +1,8 @@
+[![PyPI - Version](https://img.shields.io/pypi/v/regularized-var.svg)](https://pypi.org/project/regularized-var/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/regularized-var.svg)](https://pypi.org/project/regularized-var/)
+[![Downloads](https://pepy.tech/badge/regularized-var)](https://pepy.tech/project/regularized-var)
+[![CI](https://github.com/<YOUR_USER>/regularized-var/actions/workflows/ci.yml/badge.svg)](https://github.com/<YOUR_USER>/regularized-var/actions/workflows/ci.yml)
+
 # regularized-var
 
 Vector Autoregression (VAR) with l2 regularization, optional Minnesota prior, error metrics, and walk-forward validation.
