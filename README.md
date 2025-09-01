@@ -14,7 +14,9 @@ pip install regularized-var
 
 ```python
 import pandas as pd
-from regularized_var import VAR, MinnesotaVAR, mse, WalkForward, WalkForwardValidator
+from regularized_var.var import VAR, MinnesotaVAR
+from regularized_var.metrics import mse
+from regularized_var.model_selection import WalkForward, WalkForwardValidator
 
 # Data
 df = pd.DataFrame(...)
@@ -39,7 +41,7 @@ print(wf.overall_score_)
 ### Ridge-regularized VAR
 The baseline `VAR` class solves a ridge-penalized least squares problem:
 
-![Equation 0](images/equation0.jpg)
+![Equation 0](https://raw.githubusercontent.com/RachelDoehr/regularized-var/main/images/equation0.jpg)
 
 where Y are the responses, Z is the lagged design matrix,
 and the intercept (if present) is excluded from the penalty.
@@ -55,15 +57,15 @@ The *Minnesota prior* (see [Litterman, 1986: "Forecasting with Bayesian Vector A
 
 In practice, this leads to a **ridge-style penalty** on the coefficient matrix:
 
-![Equation 1](images/equation1.jpg)
+![Equation 1](https://raw.githubusercontent.com/RachelDoehr/regularized-var/main/images/equation1.jpg)
 
 with weights
 
-![Equation 2](images/equation2.jpg)
+![Equation 2](https://raw.githubusercontent.com/RachelDoehr/regularized-var/main/images/equation2.jpg)
 
-- \(i\): target equation index  
-- \(j\): predictor variable index  
-- \(l\): lag index  
+- `i`: target equation index
+- `j`: predictor variable index
+- `ℓ`: lag index
 
 This weighted ℓ₂ penalty reproduces a structure similar to the **Minnesota prior**, where:
 - own lags are shrunk mildly,

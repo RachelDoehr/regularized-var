@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.1.1] - 2025-09-01
+### Changed
+- Public API: stop re-exporting symbols at the package root. 
+  Import explicitly from submodules:
+  - `from regularized_var.var import VAR, MinnesotaVAR`
+  - `from regularized_var.metrics import mse, mae, pseudo_r2`
+  - `from regularized_var.model_selection import WalkForward, WalkForwardValidator`
+- README: badges added; Minnesota prior hyperlinks fixed; equations switched to image links
+  (PyPI-friendly)
+
+### Notes
+- This is a small breaking change for users who previously did `from regularized_var import VAR`.  
+  Use the submodule imports above.
+
 ## [0.1.0] - 2025-08-31
 ### Added
 - **Core Models**
